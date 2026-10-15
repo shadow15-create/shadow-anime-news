@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadow Anime News</title>
+<meta name="description" content="Discover anime news, upcoming releases, trailers and announcements.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090a12;color:#f5f5fa;font-family:Arial,sans-serif}
+header{background:linear-gradient(120deg,#19142d,#101522);padding:28px 16px;border-bottom:2px solid #8b5cf6}
+.container{max-width:1050px;margin:auto}
+.logo{font-size:30px;font-weight:900;letter-spacing:1px}
+.logo span{color:#a78bfa}
+header p{color:#bbb8ca}
+nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px}
+nav a{color:white;text-decoration:none}
+nav a:hover{color:#a78bfa}
+main{max-width:1050px;margin:auto;padding:22px 16px}
+.hero{padding:25px;border-radius:14px;background:#171a29;margin-bottom:25px}
+.hero h1{font-size:28px;margin-top:0}
+.hero p{color:#c4c5d2;line-height:1.6}
+input{width:100%;padding:14px;border-radius:8px;border:1px solid #39334e;background:#141522;color:white;font-size:16px;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:#151825;border:1px solid #292d40;border-radius:13px;overflow:hidden}
+.art{height:155px;background:linear-gradient(135deg,#302054,#182943);display:flex;align-items:center;justify-content:center;font-size:55px}
+.content{padding:18px}
+.tag{color:#b49aff;font-size:12px;font-weight:bold;text-transform:uppercase}
+h2{font-size:20px;line-height:1.4}
+.content p{color:#c2c4d1;line-height:1.6}
+a.story{color:#b49aff;text-decoration:none;font-weight:bold}
+footer{margin-top:40px;padding:25px 16px;border-top:1px solid #292d40;color:#aaa;text-align:center}
+.small{font-size:13px;color:#aaa}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="logo">SHADOW <span>ANIME NEWS</span></div>
+<p>Your daily destination for everything anime.</p>
+<nav>
+<a href="#latest">Latest News</a>
+<a href="#releases">Upcoming Anime</a>
+<a href="#about">About Us</a>
+<a href="https://www.crunchyroll.com/news" target="_blank" rel="noopener">Anime Sources ↗</a>
+</nav>
+</div>
+</header><main>
+<section class="hero">
+<h1>🔥 Enter the World of Anime</h1>
+<p>Discover anime announcements, new seasons, release dates, trailers and character reveals. Stay connected to the anime world with Shadow Anime News.</p>
+</section><h2 id="latest">📰 Latest Anime Updates</h2>
+<input id="search" type="search" placeholder="Search anime news..."><div class="grid" id="news">
+<article class="card">
+<div class="art">🎌</div>
+<div class="content">
+<span class="tag">Anime News</span>
+<h2>Where to Find the Latest Anime Announcements</h2>
+<p>Follow official anime websites and trusted news publishers for confirmed information about upcoming seasons, trailers and release dates.</p>
+<a class="story" href="https://www.crunchyroll.com/news" target="_blank" rel="noopener">Read Anime News ↗</a>
+</div>
+</article><article class="card" id="releases">
+<div class="art">🎬</div>
+<div class="content">
+<span class="tag">Upcoming Releases</span>
+<h2>Looking Forward to New Anime Seasons</h2>
+<p>Wondering which anime will return next? Check trusted reporting and official announcements to learn about renewals and release windows.</p>
+<a class="story" href="https://www.animenewsnetwork.com/" target="_blank" rel="noopener">Explore Updates ↗</a>
+</div>
+</article><article class="card">
+<div class="art">⚔️</div>
+<div class="content">
+<span class="tag">Trailers & Characters</span>
+<h2>New Trailers and Character Reveals</h2>
+<p>Discover official previews and character announcements. Visit the original publishers for verified news and available video trailers.</p>
+<a class="story" href="https://www.crunchyroll.com/news" target="_blank" rel="noopener">See Latest Reports ↗</a>
+</div>
+</article><article class="card">
+<div class="art">🌟</div>
+<div class="content">
+<span class="tag">Anime Community</span>
+<h2>What's Next in the Anime World?</h2>
+<p>From action adventures to fantasy and romance, there is always something new to discover. Follow reliable sources for the latest announcements.</p>
+<a class="story" href="https://www.animenewsnetwork.com/" target="_blank" rel="noopener">Read More ↗</a>
+</div>
+</article>
+</div><section class="hero" id="about" style="margin-top:28px">
+<h2>About Shadow Anime News</h2>
+<p>Our goal is to help anime fans discover news, announcements, upcoming releases and official trailers in one place. We link to original sources so readers can explore the full reports.</p>
+<p class="small">This is the starter version. Live news feeds and automatic article publishing have not yet been connected.</p>
+</section>
+</main><footer>
+<p>© <span id="year"></span> Shadow Anime News</p>
+<p class="small">An independent anime fan news project. Not affiliated with anime studios or publishers.</p>
+</footer><script>
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("search").addEventListener("input",function(){
+const q=this.value.toLowerCase();
+document.querySelectorAll("#news .card").forEach(function(card){
+card.style.display=card.innerText.toLowerCase().includes(q)?"block":"none";
+});
+});
+</script></body>
+  </html>
